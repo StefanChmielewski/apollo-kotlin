@@ -19,7 +19,6 @@ internal class FragmentModelsBuilder(
 
   private val packageName = context.layout.fragmentPackageName(fragment.filePath)
 
-
   /**
    * For experimental_operationBasedWithInterfaces, fragments may have interfaces that are
    * only used locally. In that case, we can generate them as sealed interfaces
@@ -27,7 +26,7 @@ internal class FragmentModelsBuilder(
   private val localInheritance = modelGroup.models.any { !it.isInterface }
 
   /**
-   * Fragments need to be flattened at depth 1 to avoid having all classes poluting the fragments package name
+   * Fragments need to be flattened at depth 1 to avoid having all classes polluting the fragments package name
    */
   private val modelBuilders = modelGroup.maybeFlatten(flatten, 1).flatMap { it.models }
       .map {

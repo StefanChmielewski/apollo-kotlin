@@ -15,7 +15,7 @@ fun Project.configureMppDefaults(withJs: Boolean, withLinux: Boolean) {
     jvm()
 
     if (withJs) {
-      js(BOTH) {
+      js(IR) {
         nodejs {
           testTask {
             useMocha {

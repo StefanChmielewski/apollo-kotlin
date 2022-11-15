@@ -7,6 +7,8 @@ golatac.init(file("../gradle/libraries.toml"))
 
 repositories {
   mavenCentral()
+  mavenLocal()
+maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
 }
 
 rootProject.configureNode()

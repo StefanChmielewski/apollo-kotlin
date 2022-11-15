@@ -23,6 +23,9 @@ pluginManagement {
         includeModule("com.github.ben-manes", "gradle-versions-plugin")
       }
     }
+    mavenLocal()
+maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
+    
   }
 }
 

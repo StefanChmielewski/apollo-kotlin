@@ -11,5 +11,9 @@ fun Project.configureRepositories() {
         includeModule("org.jetbrains.kotlinx", "kotlinx-nodejs")
       }
     }
+    mavenLocal()
+    maven {
+      url = uri("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
+    }
   }
 }

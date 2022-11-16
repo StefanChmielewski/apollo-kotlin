@@ -28,7 +28,7 @@ okhttp = "4.9.3"
 rx-android = "2.0.1"
 rx-java2 = "2.2.21"
 rx-java3 = "3.1.3"
-sqldelight = "1.5.3"
+sqldelight = "1.5.4"
 truth = "1.1.3"
 
 [libraries]

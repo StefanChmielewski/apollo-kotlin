@@ -13,6 +13,8 @@ repositories {
         url = uri("../../../../build/localMaven")
     }
     mavenCentral()
+    mavenLocal()
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
 }
 
 configure<KotlinMultiplatformExtension> {

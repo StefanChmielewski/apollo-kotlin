@@ -13,5 +13,7 @@ pluginManagement {
       url = uri("../../../../build/localMaven")
     }
     gradlePluginPortal()
+    mavenLocal()
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
   }
 }

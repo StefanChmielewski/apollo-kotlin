@@ -9,6 +9,8 @@ project.buildscript.repositories {
     url = uri("$apolloDepth/build/localMaven")
   }
   mavenCentral()
+  mavenLocal()
+  maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
   google()
 }
 
@@ -25,6 +27,8 @@ allprojects {
       url = uri(File(project.rootDir, "$apolloDepth/build/localMaven").absolutePath)
     }
     mavenCentral()
+    mavenLocal()
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
     google()
   }
 }

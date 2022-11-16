@@ -7,7 +7,10 @@ buildscript {
     maven {
       url = uri("../../../../build/localMaven")
     }
+    mavenCentral()
     gradlePluginPortal()
+    mavenLocal()
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
   }
 
   dependencies {

@@ -103,7 +103,7 @@ tasks.register("ciBuild") {
 repositories {
   mavenCentral() // for dokka
   mavenLocal()
-maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
+  maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
 }
 
 tasks.named("dokkaHtmlMultiModule").configure {

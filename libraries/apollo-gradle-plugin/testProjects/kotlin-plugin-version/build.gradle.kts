@@ -6,6 +6,8 @@ buildscript {
       url = uri("../../../../build/localMaven")
     }
     mavenCentral()
+    mavenLocal()
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
   }
   dependencies {
     classpath(libs.apollo.plugin)
@@ -21,6 +23,8 @@ repositories {
     url = uri("../../../../build/localMaven")
   }
   mavenCentral()
+  mavenLocal()
+  maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
 }
 
 dependencies {

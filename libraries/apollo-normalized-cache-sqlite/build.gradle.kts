@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
 plugins {
   id("org.jetbrains.kotlin.multiplatform")
   id("apollo.library")
@@ -114,3 +116,7 @@ tasks.configureEach {
   }
 }
 
+kotlin.targets
+    .filterIsInstance<KotlinNativeTarget>()
+    .flatMap { it.binaries }
+    .forEach { it.linkerOpts("-lsqlite3") }

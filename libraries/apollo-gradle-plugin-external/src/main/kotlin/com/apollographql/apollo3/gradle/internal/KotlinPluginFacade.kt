@@ -9,6 +9,7 @@ import org.gradle.api.Action
 import org.gradle.api.Project
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeCompilation
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 /**
  * A class that hides all references to the Kotlin plugin from the caller.
@@ -32,11 +33,9 @@ fun getKotlinTargetLanguage(project: Project, userSpecified: String?): TargetLan
 internal fun linkSqlite(project: Project) {
   val extension = project.kotlinMultiplatformExtension ?: return
   extension.targets
-      .flatMap { it.compilations }
-      .filterIsInstance<KotlinNativeCompilation>()
-      .forEach { compilationUnit ->
-        compilationUnit.kotlinOptions.freeCompilerArgs += arrayOf("-linker-options", "-lsqlite3")
-      }
+      .filterIsInstance<KotlinNativeTarget>()
+      .flatMap { it.binaries }
+      .forEach { it.linkerOpts("-lsqlite3") }
 }
 
 internal fun checkKotlinPluginVersion(project: Project) {

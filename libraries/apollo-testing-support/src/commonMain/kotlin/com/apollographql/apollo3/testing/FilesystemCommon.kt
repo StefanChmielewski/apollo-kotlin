@@ -34,9 +34,12 @@ fun checkFile(actualText: String, path: String) {
 
   if (actualText != expectedText) {
     if (updateTestFixtures) {
-      HostFileSystem.delete(expected)
+      // see https://youtrack.jetbrains.com/issue/KT-54995
+      HostFileSystem.delete(expected, mustExist = false)
       HostFileSystem.openReadWrite(
           file = expected,
+          mustCreate = false,
+          mustExist = false
       ).use {
         it.sink().buffer().use {
           it.writeUtf8(actualText)

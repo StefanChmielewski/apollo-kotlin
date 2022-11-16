@@ -115,8 +115,3 @@ tasks.configureEach {
     enabled = false
   }
 }
-
-kotlin.targets
-    .filterIsInstance<KotlinNativeTarget>()
-    .flatMap { it.binaries }
-    .forEach { it.linkerOpts("-lsqlite3") }

@@ -7,8 +7,6 @@ buildscript {
     }
     mavenCentral()
     mavenLocal()
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
-
   }
   dependencies {
     classpath("com.apollographql.apollo3:apollo-gradle-plugin:APOLLO_VERSION")
@@ -26,8 +24,6 @@ repositories {
   }
   mavenCentral()
   mavenLocal()
-  maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
-
 }
 
 dependencies {

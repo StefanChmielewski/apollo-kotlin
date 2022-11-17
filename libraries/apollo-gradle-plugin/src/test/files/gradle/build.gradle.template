@@ -6,9 +6,6 @@ buildscript {
     mavenCentral()
     google()
     mavenLocal()
-    maven {
-      url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/"
-    }
   }
   dependencies {
     // ADD BUILDSCRIPT DEPENDENCIES HERE
@@ -28,9 +25,6 @@ repositories {
   mavenCentral() // for jetbrainsAnnotations, depended on by apolloApi
   google() // for aapt2
   mavenLocal()
-  maven {
-    url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/"
-  }
 }
 
 dependencies {

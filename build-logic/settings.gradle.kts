@@ -10,7 +10,6 @@ pluginManagement {
     }
     mavenCentral()
     mavenLocal()
-maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
   }
 }
 
@@ -26,6 +25,5 @@ dependencyResolutionManagement {
       }
     }
     mavenLocal()
-maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap/")
   }
 }
